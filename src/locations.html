@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumem-Christi</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+              colors: {
+                green: "#00A991",
+                veryLightGreen: "#ECFDF3",
+                shadowGreen: "#D9F2EF",
+                lightGreen: "#027A48",
+                darkGreen: "#003B33",
+                beige:"#FAF6ED",
+                brown: "#E3DAC5",
+                cream: "#FAF8F2",
+                gray: "#667085",
+                veryDarkBlue: "#1D2939",
+              }, 
+              fontFamily: {
+                Inter: ['Inter', 'sans-serif'],
+                RachelBrown: ['RachelBrown', 'Georgia', 'serif']
+              },  
+            },
+        },
+      }
+  </script>
+</head>
+<body class="fon-Inter">
+  <!-- Header -->
+  <div id="header"></div>
+  
+  <!-- Hero section -->
+  <section class="xl:mx-20 lg:mx-16 mx-10 mb-20">
+    <div class="grid justify-items-center mt-24 mb-20">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• Location</span>
+      <h3 class="mt-6 mb-10 text-5xl font-normal w-[70%] text-center font-RachelBrown">
+        Lumen Christi of Virginia is part of a broader network of care facilities dedicated to serving individuals in need.
+      </h3>
+
+      <!-- Sign Up for a Tour -->
+        <a href="./contact-us.html">
+          <button class="bg-green text-white  xl:text-xl lg:text-lg md:text-base text-sm font-medium rounded-full lg:px-10 md:px-8 px-4 lg:py-3 md:py-2 py-1 lg:ring-8 ring-4 ring-shadowGreen transition">
+            Sign Up for a Tour
+          </button>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-2 gap-x-8 mb-28">
+      <div>
+        <img src="./assets/images/lc-location-img1.png" alt="location-img1" class="w-full">
+        <h4 class="text-4xl mt-5 mb-7 w-[70%] font-RachelBrown">
+          Lumen Christi of Arizona Assisted Living
+        </h4>
+        <p class="text-gray text-xl font-medium w-[82%] mb-5">
+          We are excited to expand our services with Providence Home, 
+          which will offer the same high level of care in a new and welcoming location. Stay tuned for more details!
+        </p>
+        <p class="text-blck text-xl font-medium">
+          (Phoenix, Arizona. Coming Soon!)
+        </p>
+      </div>
+      <div>
+        <img src="./assets/images/lc-location-img2.png" alt="location-img2" class="w-full">
+        <h4 class="text-4xl mt-5 mb-7 w-[90%] font-RachelBrown">
+          El Pueblo Assisted Living Facility(Fountain Hills, Arizona)
+        </h4>
+        <p class="text-gray text-xl font-medium w-[80%]">
+          Our Virginia Beach Home provides a warm and structured environment where residents receive individualized 
+          care while engaging in daily activities that promote socialization, personal growth, and community involvement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- States We Serve section -->
+   <section class="xl:px-20 lg:px-16 px-10 bg-cream">
+    <div class="grid justify-items-center pt-32">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• Location</span>
+      <h2 class="mt-4 mb-[52px] text-5xl font-RachelBrown">States We Serve</h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-x-8" >
+      <div></div>
+      <div></div>
+    </div>
+   </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+
+  <script src="./main.js"></script>   
+</body>
+</html>

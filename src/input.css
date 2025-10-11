@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'RachelBrown';
+  src: url('/fonts/RachelBrown.woff2') format('woff2'),
+       url('/fonts/RachelBrown.woff') format('woff'),
+       url('/fonts/RachelBrown.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
