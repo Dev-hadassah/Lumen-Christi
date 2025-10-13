@@ -37,10 +37,182 @@
 <body class="fon-Inter">
   <!-- Header -->
   <div id="header"></div>
+
+  <!-- Hero section -->
+  <section class="xl:mx-20 lg:mx-16 mx-10">
+    <div class="grid grid-cols-2 gap-x-12">
+      <div class="mt-60">
+        <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
+          • Career
+        </span>
+        <h1 class="text-5xl mt-6 font-normal text-veryDarkBlue font-RachelBrown">
+          Employment Opportunities
+        </h1>
+        <p class="mt-6 text-black text-base font-normal">
+          We are looking for compassionate staff members to join our team. 
+          If you have interest in working at our home, please complete the application below.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col md:flex-row lg:space-x-9 md:space-x-5 mt-8">
+          <!-- Download Application -->
+          <a href="./contact-us.html">
+            <button class="bg-green text-white  xl:text-xl lg:text-lg md:text-base text-sm font-medium rounded-full lg:px-10 md:px-8 px-4 lg:py-3 md:py-2 py-1 lg:ring-8 ring-4 ring-shadowGreen transition">
+              Download Application
+            </button>
+          </a>
+
+          <!-- Contact Us -->
+          <a href="./contact-us.html">
+            <button class="border border-green text-green xl:text-xl lg:text-base text-sm font-medium xl:px-20 lg:px-14 md:px-10 w-full lg:py-3 py-2 rounded-full transition">
+                Contact Us
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Career-img -->
+      <div class="my-20">
+        <img src="./assets/images/lc-careers-img.png" alt="Career-img" class="w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Badge -->
+  <section class="xl:px-20 lg:px-16 px-10 pt-20 bg-[#F9FAFB]">
+    <div class="grid justify-items-center text-center">
+      <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
+        • Career
+      </span>
+
+      <!-- Section Title -->
+      <h2 class="text-5xl text-veryDarkBlue mt-6 font-normal font-RachelBrown">Job Vacancies</h2>
+      <p class="text-gray-500 max-w-xl mx-auto mt-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+      </p>
+    </div>
+
+    <!-- Job Grid -->
+    <div id="jobGrid" class="grid md:grid-cols-2 gap-x-16 py-20">
+      <!-- Job Card Template (Cloned via JS) -->
+    </div>
+  </section>
+
+   <!-- Pagination -->
+  <div class="flex justify-center items-center gap-2 mb-16 mt-10">
+    <button id="prevPage" class="flex items-center gap-1 px-4 py-[10px] border rounded-md font-semibold text-veryDarkBlue hover:bg-gray-100">
+      ← Previous
+    </button>
+
+    <div id="pageNumbers" class="flex items-center gap-1"></div>
+
+    <button id="nextPage" class="flex items-center gap-1 px-4 py-[10px] border rounded-md font-semibold text-veryDarkBlue hover:bg-gray-100">
+      Next →
+    </button>
+  </div>
+
+  <!-- Call to Action -->
+  <section class="xl:m-20 lg:m-16 m-10">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="xl:text-4xl lg:text-3xl text-2xl font-normal text-gray text-center md:text-left md:w-[60%] font-RachelBrown">
+          <span class="text-veryDarkBlue font-semibold">Have questions? Interested in scheduling a tour?</span>
+          Contact us today to learn more about our homes and services.
+      </p>
+
+      <!-- Sign Up for a Tour -->
+      <a href="./contact-us.html">
+          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 px-8 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen transition mt-6">
+           Sign Up for a Tour
+          </button>
+      </a>
+    </div>
+    </section>
   
   <!-- Footer -->
   <div id="footer"></div>
+  
+  <script>
+    const jobs = [
+      { title: "Direct Support Professional", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Program Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+       { title: "Direct Support Professional", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Health Giver", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Health Giver", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Program Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Direct Support Professional", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Program Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Health Giver", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
+      { title: "Program Manager", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." }
+    ];
 
+    const jobsPerPage = 6;
+    let currentPage = 1;
+
+    function renderJobs() {
+      const jobGrid = document.getElementById('jobGrid');
+      jobGrid.innerHTML = '';
+
+      const start = (currentPage - 1) * jobsPerPage;
+      const paginatedJobs = jobs.slice(start, start + jobsPerPage);
+
+      paginatedJobs.forEach(job => {
+        const card = document.createElement('div');
+        card.className = "border-b border-b-[#D0D5DD] py-9";
+        card.innerHTML = `
+          <h3 class="text-3xl font-RachelBrown font-normal mb-4 text-black">${job.title}</h3>
+          <p class="text-base mb-8 text-black">${job.desc}</p>
+          <a href="./contact-us.html">
+            <button class="bg-[#00A991] text-white text-xl font-medium px-8 py-3 rounded-full hover:bg-[#00947E] transition">
+              Apply Now
+            </button>
+          </a>
+        `;
+        jobGrid.appendChild(card);
+      });
+    }
+
+    function renderPagination() {
+      const totalPages = Math.ceil(jobs.length / jobsPerPage);
+      const pageNumbers = document.getElementById('pageNumbers');
+      pageNumbers.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.className = `px-3 py-1 border rounded-md ${i === currentPage ? 'bg-[#00A991] text-white' : 'text-gray-600 hover:bg-gray-100'}`;
+        btn.textContent = i;
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          renderJobs();
+          renderPagination();
+        });
+        pageNumbers.appendChild(btn);
+      }
+
+      document.getElementById('prevPage').disabled = currentPage === 1;
+      document.getElementById('nextPage').disabled = currentPage === totalPages;
+    }
+
+    document.getElementById('prevPage').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderJobs();
+        renderPagination();
+      }
+    });
+
+    document.getElementById('nextPage').addEventListener('click', () => {
+      const totalPages = Math.ceil(jobs.length / jobsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderJobs();
+        renderPagination();
+      }
+    });
+
+    // Initial load
+    renderJobs();
+    renderPagination();
+  </script>
 
   <script src="./main.js"></script>  
 </body>
