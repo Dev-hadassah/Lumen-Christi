@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumem-Christi</title>
-    <link href="./dist/output.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -39,83 +39,94 @@
   <div id="header"></div>
 
   <!-- Hero Section -->
-  <section class="xl:mx-20 lg:mx-16 mx-10 mb-20">
+  <section class="xl:mx-20 lg:mx-16 mx-10">
     <!-- Heading -->
-    <h1 class="xl:text-7xl lg:text-5xl md:text-3xl text-xl font-normal text-veryDarkBlue my-8 font-RachelBrown">
-      We Provide Compassionate and <br> Professional Care
+    <h1 class="xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-normal text-veryDarkBlue my-10 font-RachelBrown">
+      We Provide Compassionate and Professional Care
     </h1>
     
      <!-- Slider Container -->
     <div class="relative">
       <!-- Slides -->
-      <div id="slider" class="relative overflow-hidden">
-        <div class="slide active">
-          <img src="./assets/images/lc-hero2.png" alt="Slide 1" class="w-full">
+      <div class="slider relative overflow-hidden">
+        <div class="slides">
+          <div class="slide active">
+            <img src="./assets/images/lc-hero2.png" alt="Slide 1" class="w-full">
+          </div>
+          <div class="slide hidden">
+            <img src="./assets/images/lc-hero2.png" alt="Slide 2" class="w-full">
+          </div>
+          <div class="slide hidden">
+            <img src="./assets/images/lc-hero2.png" alt="Slide 3" class="w-full">
+          </div>
         </div>
-        <div class="slide hidden">
-          <img src="./assets/images/lc-hero2.png" alt="Slide 2" class="w-full">
-        </div>
-        <div class="slide hidden">
-          <img src="./assets/images/lc-hero2.png" alt="Slide 3" class="w-full">
-        </div>
+      
+
+        <!-- Navigation Arrows -->
+        <!-- Prev arrow -->
+        <button
+          class="prev absolute left-3 md:left-5 lg:left-7 xl:left-9 top-[60%] md:top-[50%] -translate-y-1/2 scale-75 sm:scale-90 md:scale-100 transition-transform duration-300">
+          <svg class="w-8 h-8 lg:w-12 lg:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white"/>
+            <path d="M24.707 29.293L20.414 25H30V23H20.414L24.707 18.707L23.293 17.293L16.586 24L23.293 30.707L24.707 29.293Z" fill="white"/>
+          </svg>
+        </button>
+
+        <!-- Next arrow -->
+        <button
+          class="next absolute right-3 md:right-5 lg:right-7 xl:right-9 top-[60%] md:top-[50%] -translate-y-1/2 scale-75 sm:scale-90 md:scale-100 transition-transform duration-300">
+          <svg class="w-8 h-8 lg:w-12 lg:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white"/>
+            <path d="M23.293 29.293L24.707 30.707L31.414 24L24.707 17.293L23.293 18.707L27.586 23H18V25H27.586L23.293 29.293Z" fill="white"/>
+          </svg>
+        </button>
       </div>
 
-      <!-- Navigation Arrows -->
-       <!-- Prev arrow -->
-      <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M12.707 17.293L8.414 13H18V11H8.414L12.707 6.70697L11.293 5.29297L4.586 12L11.293 18.707L12.707 17.293Z" fill="white"/>
-        </svg>
-      </button>
-
-      <!-- Next arrow -->
-      <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M11.293 17.293L12.707 18.707L19.414 12L12.707 5.29297L11.293 6.70697L15.586 11H6V13H15.586L11.293 17.293Z" fill="white"/>
-        </svg>
-      </button>
-
        <!-- CTA Bar -->
-      <div class="bg-green text-white xl:p-14 lg:p-10 p-5 rounded-b-lg flex flex-col md:flex-row items-center justify-between">
-        <p class="md:mb-0 xl:w-[38%] lg:w-[48%] md:w-[50%] w-full xl:text-xl lg:text-base text-sm font-normal mb-7 lg:mb-0 text-center md:text-left">
-          Based in Virginia Beach, we are committed to delivering high-quality residential services
-          tailored to the unique needs of our residents.
-        </p>
+      <div class="relative bg-cover bg-center rounded-b-lg" style="background-image: url('./assets/images/lc-cta-background.png');">
+        <div class="xl:p-14 lg:p-10 md:p-5 p-3 flex flex-col md:flex-row items-center justify-between">
+          <p class="md:mb-0 xl:w-[38%] lg:w-[48%] md:w-[50%] w-full xl:text-xl lg:text-base text-sm font-normal text-white mb-5 lg:mb-0 text-center md:text-left">
+            Based in Virginia Beach, we are committed to delivering high-quality residential services
+            tailored to the unique needs of our residents.
+          </p>
 
-        <!-- Sign Up for a Tour -->
-        <div class="flex flex-col md:flex-row lg:space-x-6 md:space-x-2">
-          <a href="./contact-us.html">
-             <button class="bg-white text-darkGreen xl:text-xl lg:text-base text-sm font-medium xl:px-10 md:px-4 w-full lg:py-3 py-2 rounded-full lg:ring-8 mb-5 md:mb-0 ring-4 ring-white/45 transition">
-                Sign Up for a Tour
-             </button>
-          </a>
+          <!-- Sign Up for a Tour -->
+          <div class="flex flex-col md:flex-row xl:space-x-6 lg:space-x-4 md:space-x-2">
+            <a href="./contact-us.html">
+              <button class="bg-white text-darkGreen xl:text-xl lg:text-base text-sm font-medium xl:px-12 md:px-4 px-14 lg:py-3 py-2 rounded-full lg:ring-8 mb-5 md:mb-0 ring-4 ring-white/45 transition">
+                  Sign Up for a Tour
+              </button>
+            </a>
 
-          <!-- Contact Us -->
-          <a href="./contact-us.html">
-            <button class="border border-white text-white xl:text-xl lg:text-base text-sm font-medium xl:px-16 lg:px-10 md:px-8 w-full lg:py-3 py-2 rounded-full transition">
-                Contact Us
-            </button>
-          </a>
+            <!-- Contact Us -->
+            <a href="./contact-us.html">
+              <button class="border border-white text-white xl:text-xl lg:text-base text-sm font-medium xl:px-16 lg:px-11 md:px-8 px-20 lg:py-3 py-2 rounded-full transition">
+                  Contact Us
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Our Mission Section -->
-  <section class="">
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:mx-20 lg:mx-16 mx-10 xl:my-40 lg:my-36 my-24">
-      <div class="md:text-left text-center">
-        <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• About us</span>
-        <h2 class="xl:text-7xl lg:text-5xl text-4xl font-normal mt-2 text-veryDarkBlue font-RachelBrown mb-7 md:mb-0">Our Mission</h2>
-      </div>
+  <section id="about" class="">
+    <div class="relative bg-cover bg-center" style="background-image: url('./assets/images/our-mission-bg.png');">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:px-20 lg:px-16 px-10 xl:py-40 lg:py-36 py-28">
+        <div class="md:text-left text-center">
+          <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• About us</span>
+          <h2 class="xl:text-7xl lg:text-5xl text-4xl font-normal mt-2 text-veryDarkBlue font-RachelBrown mb-7 md:mb-0">Our Mission</h2>
+        </div>
 
-      <div class="">
-          <p class="xl:text-2xl lg:text-lg text-base font-normal text-gray xl:w-[105%] md:text-left text-center">
-            At Lumen Christi Home of Virginia, our mission is to provide a supportive and enriching
-            living environment for individuals with developmental disabilities.We are committed to enhancing
-            independence, fostering meaningful relationships, and ensuring each resident receives personalized 
-            care tailored to their needs.
-          </p>
+        <div class="">
+            <p class="xl:text-2xl lg:text-lg text-base font-normal text-gray xl:w-[105%] md:text-left text-center">
+              At Lumen Christi Home of Virginia, our mission is to provide a supportive and enriching
+              living environment for individuals with developmental disabilities.We are committed to enhancing
+              independence, fostering meaningful relationships, and ensuring each resident receives personalized 
+              care tailored to their needs.
+            </p>
+        </div>
       </div>
     </div>
 
@@ -143,7 +154,7 @@
 
         <!-- Sign Up for a Tour -->
         <a href="./contact-us.html">
-          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 px-8 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition mt-10">
+          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition mt-10">
             Sign Up for a Tour
           </button>
         </a>
@@ -156,45 +167,45 @@
       </div>
 
       <!-- Row 1 -->
-      <div class="flex md:justify-between border-t lg:py-16 py-12">
-        <ul class="list-disc list-outside flex justify-start lg:pl-10 md:pl-8 pl-6">
+      <div class="flex md:flex-row flex-col md:justify-between border-t lg:py-16 py-12">
+        <ul class="list-disc list-outside md:flex md:justify-start lg:pl-10 md:pl-8 pl-6">
           <li class="xl:text-3xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue">
             Personalized Support Plans:
           </li>
         </ul>
 
-        <ul class="list-disc list-outside flex justify-end">
-          <li class="xl:text-2xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue w-[50%]">
+        <ul class="list-disc list-outside md:flex md:justify-end">
+          <li class="xl:text-2xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue md:w-[50%]">
             Individualized assistance based on each resident's specific needs.
           </li>
         </ul>
       </div>
 
       <!-- Row 2 -->
-      <div class="flex md:justify-between border-t lg:py-16 py-12">
-        <ul class="list-disc list-outside flex justify-start lg:pl-10 md:pl-8 pl-6">
+      <div class="flex md:flex-row flex-col md:justify-between border-t lg:py-16 py-12">
+        <ul class="list-disc list-outside md:flex md:justify-start lg:pl-10 md:pl-8 pl-6">
           <li class="xl:text-3xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue w-full">
             Community Integration:
           </li>
         </ul>
 
-        <ul class="list-disc list-outside flex justify-end">
-          <li class="xl:text-2xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue xl:w-[40%] w-[45%]">
+        <ul class="list-disc list-outside md:flex md:justify-end">
+          <li class="xl:text-2xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue xl:w-[40%] md:w-[45%]">
             Encouraging social activities, community outings, and skill-building experiences.
           </li>
         </ul>
       </div>
 
       <!-- Row 3 -->
-      <div class="flex md:justify-between border-t lg:py-16 py-12">
-        <ul class="list-disc list-outside flex justify-start lg:pl-10 md:pl-8 pl-6">
+      <div class="flex md:flex-row flex-col md:justify-between border-t lg:py-16 py-12">
+        <ul class="list-disc list-outside md:flex md:justify-start lg:pl-10 md:pl-8 pl-6">
           <li class="xl:text-3xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue">
             Dignity & Independence:
           </li>
         </ul>
 
-        <ul class="list-disc list-outside flex justify-end">
-          <li class="xl:text-2xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue lg:w-[60%] w-[50%]">
+        <ul class="list-disc list-outside md:flex md:justify-end">
+          <li class="xl:text-2xl lg:text-xl md:text-lg text-sm font-normal text-veryDarkBlue lg:w-[60%] md:w-[50%]">
             Empowering individuals to reach their highest potential.
           </li>
         </ul>
@@ -203,8 +214,9 @@
   </section>
 
   <!-- Our Virginia Homes Section -->
-  <section class="bg-green rounded-b-[86px] xl:pt-16 lg:pt-14 pt-8 xl:pb-32 lg:pb-28 pb-20">
-    <div class="xl:mx-20 lg:mx-16 mx-10">
+  <section class="relative bg-cover bg-center rounded-b-[86px]" style="background-image: url('./assets/images/lc-virginai-home-bg.png');">
+   <div class="xl:pt-16 lg:pt-14 pt-8 xl:pb-32 lg:pb-28 pb-20">
+     <div class="xl:mx-20 lg:mx-16 mx-10">
 
       <!--Heading -->
       <div class="md:flex md:justify-between text-center border-b border-b-white lg:pb-8 pb-5">
@@ -225,12 +237,38 @@
         <div class=" mb-10 md:mb-0">
           <!-- Image Slider -->
           <div class="relative">
-            <div class="home-slide1">
-              <img src="./assets/images/lc-saints-home.png" alt="All Saints Home" class="w-full h[250px] objectcover">
+            <div class="slider relative">
+              <div class="slides">
+                <div>
+                  <img src="./assets/images/lc-saints-home.png" alt="All Saints Home" class="slide active w-full">
+                  <img src="./assets/images/lc-nene-home.png" alt="All Saints Home" class="slide hidden w-full">
+                </div>
+              </div>
+            
+              <!-- Navigation Arrows -->
+              <!-- Prev arrow -->
+              <button
+                class="prev absolute left-3 lg:left-5 xl:left-9 top-[60%] -translate-y-1/2 scale-75 sm:scale-90 md:scale-100 transition-transform duration-300">
+                <svg class="w-8 h-8 xl:w-12 xl:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white"/>
+                  <path d="M24.707 29.293L20.414 25H30V23H20.414L24.707 18.707L23.293 17.293L16.586 24L23.293 30.707L24.707 29.293Z" fill="white"/>
+                </svg>
+              </button>
+
+              <!-- Next arrow -->
+              <button
+                class="next absolute right-3 lg:right-5 lgl:right-9 top-[60%] -translate-y-1/2 scale-75 sm:scale-90 md:scale-100 transition-transform duration-300">
+                <svg class="w-8 h-8 xl:w-12 xl:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white"/>
+                  <path d="M23.293 29.293L24.707 30.707L31.414 24L24.707 17.293L23.293 18.707L27.586 23H18V25H27.586L23.293 29.293Z" fill="white"/>
+                </svg>
+              </button>
+
+              <!-- Dots container -->
+              <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex dots"></div>
             </div>
-            <button class="prev1 absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">&#8592;</button>
-            <button class="next1 absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">&#8594;</button>
           </div>
+
           <!-- Content -->
           <div class="bg-beige xl:p-8 p-5 xl:h-[45%] lg:h-[60%] md:h-[65%] h-[70%]">
             <h3 class="xl:text-5xl lg:text-3xl text-2xl font-normal text-veryDarkBlue font-RachelBrown">All Saints Home</h3>
@@ -255,12 +293,38 @@
         <div class="">
           <!-- Image Slider -->
           <div class="relative">
-            <div class="home-slide2">
-              <img src="./assets/images/lc-nene-home.png" alt="Nene Home" class="w-full">
+            <div class="slider relative">
+              <div class="slides">
+                <div>
+                  <img src="./assets/images/lc-nene-home.png" alt="All Saints Home" class="slide active w-full">
+                  <img src="./assets/images/lc-saints-home.png" alt="All Saints Home" class="slide hidden w-full">
+                </div>
+              </div>
+            
+              <!-- Navigation Arrows -->
+              <!-- Prev arrow -->
+              <button
+                class="prev absolute left-3 lg:left-5 xl:left-9 top-[60%] -translate-y-1/2 scale-75 sm:scale-90 md:scale-100 transition-transform duration-300">
+                <svg class="w-8 h-8 xl:w-12 xl:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white"/>
+                  <path d="M24.707 29.293L20.414 25H30V23H20.414L24.707 18.707L23.293 17.293L16.586 24L23.293 30.707L24.707 29.293Z" fill="white"/>
+                </svg>
+              </button>
+
+              <!-- Next arrow -->
+              <button
+                class="next absolute right-3 lg:right-5 lgl:right-9 top-[60%] -translate-y-1/2 scale-75 sm:scale-90 md:scale-100 transition-transform duration-300">
+                <svg class="w-8 h-8 xl:w-12 xl:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white"/>
+                  <path d="M23.293 29.293L24.707 30.707L31.414 24L24.707 17.293L23.293 18.707L27.586 23H18V25H27.586L23.293 29.293Z" fill="white"/>
+                </svg>
+              </button>
+
+              <!-- Dots container -->
+              <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex dots"></div>
             </div>
-            <button class="prev2 absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">&#8592;</button>
-            <button class="next2 absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100">&#8594;</button>
           </div>
+
            <!-- Content -->
           <div class="bg-beige xl:p-8 p-5 xl:h-[45%] lg:h-[60%] md:h-[65%] h-[70%]">
             <h3 class="xl:text-5xl lg:text-3xl text-2xl font-normal text-veryDarkBlue font-RachelBrown">Nene Home</h3>
@@ -285,11 +349,13 @@
 
       </div>
     </div>
+   </div>
   </section>
 
   <!-- Comprehensive IDD Residential Support -->
-  <section class="xl:mt-44 lg:mt-28 mt-20 mb-24 xl:mx-20 lg:mx-16 mx-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-20 md:gap-10 gap-0">
+  <section id="services" class="relative bg-cover bg-center" style="background-image: url('./assets/images/service-bg.png');">
+    <div class="xl:pt-44 lg:pt-28 pt-20 pb-24 xl:px-20 lg:px-16 px-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-20 md:gap-10 gap-0">
       
       <!-- Left Content -->
       <div>
@@ -388,6 +454,7 @@
       <div>
         <img src="./assets/images/lc-core-service.png" alt="Residents smiling" class="xl:h-[95%] md:h-full mdh[95%] w-full">
       </div>
+    </div>
     </div>
   </section>
 

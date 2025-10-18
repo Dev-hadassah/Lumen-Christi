@@ -40,31 +40,33 @@
 
   <!-- Hero section -->
   <section class="xl:mx-20 lg:mx-16 mx-10">
-    <div class="grid grid-cols-2 gap-x-12">
-      <div class="mt-60">
-        <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
-          • Career
-        </span>
-        <h1 class="text-5xl mt-6 font-normal text-veryDarkBlue font-RachelBrown">
-          Employment Opportunities
-        </h1>
-        <p class="mt-6 text-black text-base font-normal">
-          We are looking for compassionate staff members to join our team. 
-          If you have interest in working at our home, please complete the application below.
-        </p>
+    <div class="grid md:grid-cols-2 grid-cols-1 xl:gap-x-12 lg:gap-10 gap-x-8">
+      <div class="xl:mt-60 lg:mt-48 md:mt-36 mt-16">
+        <div class="grid justify-items-center md:justify-items-start">
+          <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
+            • Career
+          </span>
+          <h1 class="xl:text-5xl lg:text-3xl text-2xl l:mt-6 mt-4 font-normal text-veryDarkBlue font-RachelBrown">
+            Employment Opportunities
+          </h1>
+          <p class="xl:mt-6 mt-4 text-black text-base text-center md:text-start font-normal">
+            We are looking for compassionate staff members to join our team. 
+            If you have interest in working at our home, please complete the application below.
+          </p>
+        </div>
 
         <!-- Buttons -->
-        <div class="flex flex-col md:flex-row lg:space-x-9 md:space-x-5 mt-8">
+        <div class="flex flex-col md:flex-row xl:space-x-9 lg:space-x-5 md:space-x-3 mt-8 items-center justify-center md:items-start md:justify-start">
           <!-- Download Application -->
           <a href="./contact-us.html">
-            <button class="bg-green text-white  xl:text-xl lg:text-lg md:text-base text-sm font-medium rounded-full lg:px-10 md:px-8 px-4 lg:py-3 md:py-2 py-1 lg:ring-8 ring-4 ring-shadowGreen transition">
+            <button class="bg-green text-white  xl:text-xl ld:text-base text-sm font-medium rounded-full xl:px-10 lg:px-6 md:px-4 px-[75px] lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen transition mb-5 md:mb-0">
               Download Application
             </button>
           </a>
 
           <!-- Contact Us -->
           <a href="./contact-us.html">
-            <button class="border border-green text-green xl:text-xl lg:text-base text-sm font-medium xl:px-20 lg:px-14 md:px-10 w-full lg:py-3 py-2 rounded-full transition">
+            <button class="border border-green text-green xl:text-xl lg:text-base text-sm font-medium xl:px-20 lg:px-12 md:px-9 px-28 lg:py-3 py-2 rounded-full transition">
                 Contact Us
             </button>
           </a>
@@ -86,14 +88,14 @@
       </span>
 
       <!-- Section Title -->
-      <h2 class="text-5xl text-veryDarkBlue mt-6 font-normal font-RachelBrown">Job Vacancies</h2>
-      <p class="text-gray-500 max-w-xl mx-auto mt-8">
+      <h2 class="xl:text-5xl md:text-4xl text-2xl text-veryDarkBlue mt-6 font-normal font-RachelBrown">Job Vacancies</h2>
+      <p class="text-gray-500 max-w-xl mx-auto xl:mt-8 lg:mt-6 mt-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
       </p>
     </div>
 
     <!-- Job Grid -->
-    <div id="jobGrid" class="grid md:grid-cols-2 gap-x-16 py-20">
+    <div id="jobGrid" class="grid md:grid-cols-2 md:gap-x-16 lg:py-20 md:py-12 py-10">
       <!-- Job Card Template (Cloned via JS) -->
     </div>
   </section>
@@ -159,10 +161,10 @@
         const card = document.createElement('div');
         card.className = "border-b border-b-[#D0D5DD] py-9";
         card.innerHTML = `
-          <h3 class="text-3xl font-RachelBrown font-normal mb-4 text-black">${job.title}</h3>
+          <h3 class="lg:text-3xl text-2xl font-RachelBrown font-normal mb-4 text-black">${job.title}</h3>
           <p class="text-base mb-8 text-black">${job.desc}</p>
           <a href="./contact-us.html">
-            <button class="bg-[#00A991] text-white text-xl font-medium px-8 py-3 rounded-full hover:bg-[#00947E] transition">
+            <button class="bg-[#00A991] text-white lg:text-xl text-base font-medium px-8 lg:py-3 py-2 rounded-full hover:bg-[#00947E] transition">
               Apply Now
             </button>
           </a>
