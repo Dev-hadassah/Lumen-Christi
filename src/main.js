@@ -25,17 +25,28 @@ document.querySelectorAll(".slider").forEach(slider => {
 
   // 🟢 Create dots dynamically — only if .dots exists
   if (dotsContainer) {
+    // Clear previous dots (prevents duplication if function runs again)
+    dotsContainer.innerHTML = "";
+
     slides.forEach((_, i) => {
       const dot = document.createElement("span");
-      dot.className = `dot w-3 h-3 rounded-full mx-1 cursor-pointer transition-all duration-300 ${
-        i === 0 ? "bg-white" : "bg-white opacity-30"
-      }`;
+
+      // transparent by default, white on hover and when active
+      dot.className = `
+        dot w-3 h-3 rounded-full mx-1 cursor-pointer border border-white/70
+        bg-transparent transition-all duration-300
+        hover:bg-white
+        ${i === 0 ? "bg-white" : ""}
+      `;
+
       dot.addEventListener("click", () => {
         current = i;
         updateSlide();
       });
+
       dotsContainer.appendChild(dot);
     });
+
     dots = dotsContainer.querySelectorAll(".dot");
   }
 
@@ -49,8 +60,8 @@ document.querySelectorAll(".slider").forEach(slider => {
     // Update dots only if they exist
     if (dots.length > 0) {
       dots.forEach((d, i) => {
-        d.classList.toggle("opacity-30", i !== current);
         d.classList.toggle("bg-white", i === current);
+        d.classList.toggle("bg-transparent", i !== current);
       });
     }
   }
