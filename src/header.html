@@ -1,5 +1,6 @@
-<header>
-  <div class="border-b border-b-[#D0D5DD] shadow-md">
+<header class="w-full bg-white z-50">
+  <!-- Fixed Top Bar -->
+  <div class="fixed top-0 left-0 w-full bg-white border-b border-b-[#D0D5DD] shadow-md z-50">
     <div class="flex justify-between items-center xl:mr-20 xl:ml-[70px] lg:mr-16 lg:ml-[54px] mr-10 ml-[30px] my-3">
       <!-- Logo -->
       <a href="./index.html" class="flex items-center">
@@ -7,7 +8,8 @@
       </a>
 
       <!-- Burger Icon (Mobile) -->
-      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none">
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none">
         <span class="block w-6 h-[2px] bg-green mb-1 transition-all duration-200"></span>
         <span class="block w-6 h-[2px] bg-green mb-1 transition-all duration-200"></span>
         <span class="block w-6 h-[2px] bg-green transition-all duration-200"></span>
@@ -15,15 +17,17 @@
 
       <!-- Talk to an Expert (Desktop) -->
       <a href="./contact-us.html" class="hidden md:block">
-        <button class="bg-green hover:bg-[#00947E] text-white xl:text-xl lg:text-lg md:text-base text-sm font-medium rounded-full lg:px-10 md:px-8 px-4 lg:py-3 md:py-2 py-1 lg:ring-8 ring-4 ring-shadowGreen transition">
+        <button
+          class="bg-green text-white xl:text-xl lg:text-lg md:text-base text-sm font-medium rounded-full lg:px-10 md:px-8 px-4 lg:py-3 md:py-2 py-1 lg:ring-8 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:scale-95">
           Talk to an Expert
         </button>
       </a>
     </div>
   </div>
 
-  <!-- Deskstop Nav -->
-  <nav id="desktop-menu" class="hidden md:flex items-center justify-start space-x-6 md:py-[22px] xl:pl-20 lg:pl-16 md:pl-10 text-base font-semibold border-b border-b-[#D0D5DD] shadow-md text-black">
+  <!-- Desktop Nav (scrollable) -->
+  <nav id="desktop-menu"
+    class="hidden md:flex items-center justify-start space-x-6 md:py-[22px] xl:pl-20 lg:pl-16 md:pl-10 text-base font-semibold border-b border-b-[#D0D5DD] text-black xl:mt-[150px] lg:mt-[120px] mt-[95px]">
     <a href="./index.html" class="hover:text-green">Home</a>
     <a href="#about" class="hover:text-green">About Us</a>
     <a href="#services" class="hover:text-green">Services</a>
@@ -34,7 +38,8 @@
   </nav>
 
   <!-- Mobile Nav -->
-  <nav id="mobile-menu" class="hidden md:hidden border-b border-b-[#D0D5DD] shadow-md bg-white text-black">
+  <nav id="mobile-menu"
+    class="hidden md:hidden border-b border-b-[#D0D5DD] shadow-md bg-white text-black mt-[80px]">
     <div class="flex flex-col px-6 py-4 space-y-2">
       <a href="./index.html" class="py-2 hover:text-green">Home</a>
       <a href="#about" class="py-2 hover:text-green">About Us</a>
@@ -46,10 +51,13 @@
 
       <!-- Talk to an Expert (Mobile) -->
       <a href="./contact-us.html" class="mt-3">
-        <button class="bg-green text-white w-full text-sm font-medium rounded-full px-4 py-2 ring-4 ring-shadowGreen">
+        <button
+          class="bg-green text-white w-full text-sm font-medium rounded-full px-4 py-2 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:scale-105 hover:shadow-md active:scale-95">
           Talk to an Expert
         </button>
       </a>
     </div>
   </nav>
 </header>
+
+

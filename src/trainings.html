@@ -38,8 +38,8 @@
     <!-- Header -->
     <div id="header"></div>
 
-    <!-- Hero section -->
-    <section class="xl:mx-20 lg:mx-16 mx-10 lg:mt-14 mt-10">
+    <!-- Main section -->
+    <main class="xl:mx-20 lg:mx-16 mx-10 mt-14 pt-[70px] md:pt-0">
         <div>
             <!-- Heading -->
             <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">• Training</span>
@@ -76,11 +76,9 @@
                 <p class="lg:text-lg text-base text-black">2 Hours Over 2 Days</p>
             </div>
             <div>
-                <a href="">
-                    <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition md:mt-3">
-                        Send Message
-                    </button>
-                </a>
+                <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen md:mt-3 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95">
+                    Send Message
+                </button>
             </div>
         </div>
 
@@ -93,16 +91,14 @@
             <p class="lg:text-2xl text-lg font-semibold text-black">Price $60</p>
             </div>
             <div>
-                <a href="">
-                    <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition">
-                        Send Message
-                    </button>
-                </a>
+                <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95">
+                    Send Message
+                </button>
             </div>
             </a>
         </div>
         </div>
-    </section>
+    </main>
 
 
     <!-- Red Cross section -->
@@ -188,7 +184,7 @@
             </div>
 
             <!-- Cards -->
-            <div class="md:flex items-center justify-between border border-gray xl:p-10 lg:p-7 p-5 lg:mt-9 mt-7 bg-[#006557] rounded-lg">
+            <div class="md:flex items-center justify-between border border-gray xl:p-10 lg:p-7 p-5 bg-[#006557] rounded-b-lg">
             <!-- Duration -->
             <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center md:justify-items-start mb-8 md:mb-0">
                 <div class="mb-3 md:mb-0">
@@ -196,11 +192,9 @@
                     <p class="lg:text-lg text base text-white">2 Hours Over 2 Days</p>
                 </div>
                 <div class="">
-                    <a href="">
-                        <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition md:mt-3">
-                            Send Message
-                        </button>
-                    </a>
+                    <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen md:mt-3 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95">
+                        Send Message
+                    </button>
                 </div>
             </div>
 
@@ -214,7 +208,8 @@
                 </div>
                 <div>
                     <a href="">
-                        <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition">
+                        <button type="button" class="send-message-btn bg-green text-white xl:text-xl lg:text-lg text-sm font-medium rounded-full xl:px-16 lg:px-10 md:px-5 px-16 lg:py-3 py-2 lg:ring-8 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95
+">
                             Send Message
                         </button>
                     </a>
@@ -241,12 +236,12 @@
             <div>
             <label for="firstName" class="block text-sm font-medium text-[#344054] mb-2">First name</label>
             <input type="text" id="firstName" name="firstName" placeholder="First name"
-                class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green">
+                class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
             </div>
             <div>
             <label for="lastName" class="block text-sm font-medium text-[#344054] mb-2">Last name</label>
             <input type="text" id="lastName" name="lastName" placeholder="Last name"
-                class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green">
+                class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
             </div>
         </div>
 
@@ -254,29 +249,28 @@
         <div>
             <label for="email" class="block text-sm font-medium text-[#344054] mb-2">Email</label>
             <input type="email" id="email" name="email" placeholder="you@company.com"
-            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green">
+            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
         </div>
 
         <!-- Phone -->
         <div>
             <label for="phone" class="block text-sm font-medium text-[#344054] mb-2">Phone number</label>
             <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000"
-            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green">
+            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none">
         </div>
 
         <!-- Message -->
         <div>
             <label for="message" class="block text-sm font-medium text-[#344054] mb-2">Message</label>
             <textarea id="message" name="message" rows="4" placeholder="Write your message..."
-            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green"></textarea>
+            class="mt-1 block w-full rounded-md border border-[#D0D5DD] px-3 py-2 focus:border-green focus:ring-green focus:outline-none"></textarea>
         </div>
 
         <!-- Button -->
-        <a href="./contact-us.html">
-            <button class="bg-green text-white lg:text-xl md:text-lg text-base font-medium rounded-full lg:py-3 py-2 w-full ring-8 ring-shadowGreen transition mt-8">
+        <button type="submit" class="bg-green text-white lg:text-xl md:text-lg text-base font-medium rounded-full lg:py-3 py-2 w-full ring-8 ring-shadowGreen mt-8 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95
+">
             Send Message
-            </button>
-        </a>
+        </button>
         </form>
     </div>
     </div>
@@ -434,7 +428,8 @@
 
         <!-- Sign Up for a Tour -->
         <a href="./contact-us.html">
-            <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen transition mt-6">
+            <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen mt-6 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95
+">
             Sign Up for a Tour
             </button>
         </a>
