@@ -48,7 +48,7 @@
 
       <!-- Sign Up for a Tour -->
         <a href="./contact-us.html">
-          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-10 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95
+          <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-10 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
 ">
             Sign Up for a Tour
           </button>
@@ -102,35 +102,39 @@
     <!-- Cards -->
     <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-x-16 md:gap-x-10">
       <!-- Arizona img -->
-      <div class="mb-20 md:mb-0">
-        <img src="./assets/images/lc-location-img3.png" alt="Arizona-img" class="w-full lg:mb-8 mb-6">
-        <div class="grid justify-items-center text-center">
-          <h4 class="text-black lg:text-3xl text-2xl font-normal font-RachelBrown lg:mb-4 mb-2">
-            Arizona
-          </h4>
-          <p class="text-black text-base font-normal">
-            123 Sample St, phoeoix NSW 2000 AU
-          </p>
-        </div>
+      <a href="https://www.google.com/maps?q=2436+W+Tonto+St,+Phoenix,+AZ+85009" target="_blank" class="hover:underline">
+        <div class="mb-20 md:mb-0">
+          <img src="./assets/images/lc-location-img3.png" alt="Arizona-img" class="w-full lg:mb-8 mb-6">
+          <div class="grid justify-items-center text-center">
+            <h4 class="text-black lg:text-3xl text-2xl font-normal font-RachelBrown lg:mb-4 mb-2">
+              Arizona
+            </h4>
+            <p class="text-black text-base font-normal">
+              123 Sample St, phoeoix NSW 2000 AU
+            </p>
+          </div>
       </div>
+      </a>
 
        <!-- Virginia img -->
-      <div>
-        <img src="./assets/images/lc-location-img4.png" alt="Virginia-img" class="w-full lg:mb-8 mb-6">
-        <div class="grid justify-items-center text-center">
-          <h4 class="text-black lg:text-3xl text-2xl font-normal font-RachelBrown lg:mb-4 mb-2">
-            Virginia
-          </h4>
-          <p class="text-black text-base font-normal">
-            123 Sample St, New York NY 10000 USA
-          </p>
+      <a href="https://www.google.com/maps?q=177+South+Plaza+Trail,+Virginia+Beach,+VA+23452" target="_blank" class="hover:underline">
+        <div>
+          <img src="./assets/images/lc-location-img4.png" alt="Virginia-img" class="w-full lg:mb-8 mb-6">
+          <div class="grid justify-items-center text-center">
+            <h4 class="text-black lg:text-3xl text-2xl font-normal font-RachelBrown lg:mb-4 mb-2">
+              Virginia
+            </h4>
+            <p class="text-black text-base font-normal">
+              123 Sample St, New York NY 10000 USA
+            </p>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
    </section>
 
    <!-- We’d love to hear from you -->
-   <section class="grid justify-items-center mt-24">
+   <section class="grid justify-items-center mt-24 relative">
     <div class="grid justify-items-center">
       <span class="bg-veryLightGreen text-green rounded-full lg:text-sm text-xs py-1 px-4 font-medium">
         • Location
@@ -144,8 +148,19 @@
     </div>
 
     <!-- Map -->
-    <div>
-      <img src="./assets/images/lc-map.png" alt="Address-map" class="my-12">
+    <div class="relative">
+      <!-- Background Map -->
+      <img src="./assets/images/lc-US-Map.png" alt="USA Map" class="w-full my-12">
+
+      <!-- Arizona Marker -->
+      <a href="https://www.google.com/maps?q=2436+W+Tonto+St,+Phoenix,+AZ+85009" target="_blank" class="absolute block" style="top: 60%; left: 18%;">
+        <img src="./assets/images/lc-Arizona-US.png" alt="Arizona Location" class="hover:scale-110 transition-transform duration-300">
+      </a>
+
+      <!-- Virginia Marker -->
+      <a href="https://www.google.com/maps?q=177+South+Plaza+Trail,+Virginia+Beach,+VA+23452" target="_blank" class="absolute block" style="top: 43%; left: 75%;">
+        <img src="./assets/images/lc-Virginia-US.png" alt="Virginia Location" class="hover:scale-110 transition-transform duration-300">
+      </a>
     </div>
    </section>
 
@@ -159,7 +174,7 @@
 
         <!-- Sign Up for a Tour -->
         <a href="./contact-us.html">
-            <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen mt-6 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:text-[#ED1C24] hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:text-[#ED1C24] active:scale-95
+            <button class="bg-green text-white xl:text-xl lg:text-lg text-base font-medium rounded-full lg:px-10 md:px-8 px-14 lg:py-3 py-2 md:ring-8 ring-4 ring-shadowGreen mt-6 transition-all duration-300 ease-in-out hover:bg-[#00947E] hover:rounded-lg hover:scale-105 hover:shadow-lg active:bg-[#00947E] active:rounded-lg active:scale-95
 ">
             Sign Up for a Tour
             </button>
